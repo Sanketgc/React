@@ -1,9 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+const anotheruser ="xyz"
+
+const reactElement = React.createElement(
+  'a',
+  {href: 'https://www.baidu.com', target: '_blank'},
+  'click me to visit baidu.com',
+  anotheruser
+)
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+   reactElement,
+  // < App />
 )
